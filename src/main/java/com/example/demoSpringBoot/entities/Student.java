@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "last_name", nullable = false)
@@ -18,10 +18,6 @@ public class Student {
 
     @Column(name = "email",unique = true, nullable = false)
     private String email;
-
-    public Student() {
-
-    }
 
     public Student(Long id, String lastName, String firstName, String email) {
         this.id = id;
