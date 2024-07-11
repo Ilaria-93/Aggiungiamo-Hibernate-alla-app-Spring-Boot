@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Enrollment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public Enrollment(Long id) {
